@@ -85,11 +85,11 @@
           },
           {
             "name": "Restart",
-            "cmd": "systemctl reboot"
+            "cmd": "loginctl reboot"
           },
           {
             "name": "Shutdown",
-            "cmd": "systemctl -i poweroff"
+            "cmd": "loginctl -i poweroff"
           }
         ]
       },

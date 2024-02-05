@@ -99,11 +99,11 @@
           },
           {
             "name": "Restart",
-            "cmd": "systemctl reboot"
+            "cmd": "loginctl reboot"
           },
           {
             "name": "Shutdown",
-            "cmd": "systemctl -i poweroff"
+            "cmd": "loginctl -i poweroff"
           }
         ]
       },
@@ -148,8 +148,8 @@
     "menu-start-settings": {
       "cmd-lock": "swaylock -f -c 000000",
       "cmd-logout": "swaymsg exit",
-      "cmd-restart": "systemctl reboot",
-      "cmd-shutdown": "systemctl -i poweroff",
+      "cmd-restart": "loginctl reboot",
+      "cmd-shutdown": "loginctl -i poweroff",
       "autohide": true,
       "file-manager": "thunar",
       "height": 0,

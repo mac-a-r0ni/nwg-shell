@@ -11,12 +11,12 @@
   },
   {
     "label": "_Reboot",
-    "exec": "systemctl reboot",
+    "exec": "loginctl reboot",
     "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
   },
   {
     "label": "_Shutdown",
-    "exec": "systemctl -i poweroff",
+    "exec": "loginctl -i poweroff",
     "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
   }
 ]

@@ -86,11 +86,16 @@
           },
           {
             "name": "Restart",
-            "cmd": "nwg-dialog -p reboot -c \"systemctl reboot\""
+            "cmd": "nwg-dialog -p reboot -c \"loginctl reboot\""
           },
           {
             "name": "Shutdown",
-            "cmd": "nwg-dialog -p poweroff -c \"systemctl -i poweroff\""
+            "cmd": "nwg-dialog -p poweroff -c \"loginctl -i poweroff\""
+            "cmd": "loginctl reboot"
+          },
+          {
+            "name": "Shutdown",
+            "cmd": "loginctl -i poweroff"
           }
         ]
       },

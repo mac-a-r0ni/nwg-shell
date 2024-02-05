@@ -173,7 +173,7 @@ def main():
         print("    This script installs/overwrites configs and style sheets       ")
         print("          for sway, Hyprland and nwg-shell components.             ")
         print("  The only backup that will be made is the main sway config file.  ")
-        print("   This script should be used on a fresh Arch Linux installation.  ")
+        print("   This script should be used on a fresh Slackware installation.   ")
         print("            If you're running it on your existing setup,           ")
         print("                 you're doing it at your own risk.                 ")
         print("*******************************************************************")
@@ -255,7 +255,7 @@ def main():
                         break
 
             if "editor" not in s or not s["editor"]:
-                for cmd in ["mousepad", "atom", "emacs", "gedit", "geany", "kate", "vim"]:
+                for cmd in ["mousepad", "atom", "emacs", "gedit", "geany", "joe", "kate", "vim"]:
                     if is_command(cmd):
                         s["editor"] = cmd
                         break
@@ -307,8 +307,8 @@ def main():
             else:
                 print("Your computer will now restart...")
                 time.sleep(3)
-                if is_command("systemctl"):
-                    subprocess.call("sudo systemctl reboot -f", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                if is_command("loginctl"):
+                    subprocess.call("sudo loginctl reboot", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
                 else:
                     subprocess.call("sudo reboot", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 

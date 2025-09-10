@@ -29,9 +29,9 @@ cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=python-maturin
 SRCNAM=maturin
-VERSION=${VERSION:-1.9.2}
+VERSION=${VERSION:-1.9.4}
 BUILD=${BUILD:-1}
-TAG=${TAG:-_nwg}
+TAG=${TAG:-_lngn}
 PKGTYPE=${PKGTYPE:-txz}
 wget -c https://files.pythonhosted.org/packages/source/m/$SRCNAM/$SRCNAM-$VERSION.tar.gz
 if [ -z "$ARCH" ]; then
@@ -47,7 +47,7 @@ if [ ! -z "${PRINT_PACKAGE_NAME}" ]; then
   exit 0
 fi
 
-TMP=${TMP:-/tmp/nwg}
+TMP=${TMP:-/tmp/lngn}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
